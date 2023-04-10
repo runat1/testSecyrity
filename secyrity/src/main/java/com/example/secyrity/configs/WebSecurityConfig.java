@@ -31,13 +31,13 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
         this.userServiceDatails = userServiceDatails;
     }
 
-/*    @Override
+    @Override
     protected void configure(HttpSecurity http) throws Exception {
         http
                 .authorizeRequests()
                 .antMatchers("/admin/**").hasRole("ADMIN")
                 .antMatchers("/user/**").hasAnyRole("USER", "ADMIN")
-                .antMatchers("/").permitAll()
+                .antMatchers("/","/newUser").permitAll()
                 .anyRequest().authenticated()
                 .and()
                 .formLogin().successHandler(successUserHandler)
@@ -45,8 +45,8 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .and()
                 .logout()
                 .permitAll();
-    }*/
-@Override
+    }
+/*@Override
 protected void configure(HttpSecurity http) throws Exception {
     http
             .authorizeRequests()
@@ -60,7 +60,7 @@ protected void configure(HttpSecurity http) throws Exception {
             .and()
             .logout()
             .permitAll();
-}
+}*/
     @Bean
     public PasswordEncoder passwordEncoder(){
         return new BCryptPasswordEncoder();
