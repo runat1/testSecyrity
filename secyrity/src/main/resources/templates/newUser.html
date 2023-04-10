@@ -25,7 +25,7 @@
   <label for="role_select">Roles</label>
   <label for="role_select">Roles</label>
   <select multiple class="form-control" th:field="*{roleList}" id="role_select">
-    <option th:each="role : ${listRoles}"
+    <option th:each="role : ${roles}"
             th:value="${role.getName()}"
             th:text="${role.getName()}"></option>
   </select>

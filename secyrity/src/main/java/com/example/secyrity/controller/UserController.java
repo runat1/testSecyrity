@@ -28,7 +28,7 @@ public class UserController {
 	@GetMapping("/newUser")
 	public String addUser(Model model) {
 		model.addAttribute("user", new User());
-		model.addAttribute("roles",roleService.getAllRoles());
+		model.addAttribute("roles",roleService.getListOfRoles());
 		return "newUser";
 	}
 	@GetMapping("user-delete/{id}")
