@@ -9,10 +9,11 @@ import javax.transaction.Transactional;
 import java.util.List;
 @Service
 public class RoleServiselmp implements RoleService{
-    private RoleDao roleDao;
+    private final RoleDao roleDao;
     private final RoleRepository roleRepository;
 
-    public RoleServiselmp(RoleRepository roleRepository) {
+    public RoleServiselmp(RoleDao roleDao, RoleRepository roleRepository) {
+        this.roleDao = roleDao;
         this.roleRepository = roleRepository;
     }
 

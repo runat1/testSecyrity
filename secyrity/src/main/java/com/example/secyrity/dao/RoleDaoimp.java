@@ -2,12 +2,14 @@ package com.example.secyrity.dao;
 
 import com.example.secyrity.model.Role;
 import com.example.secyrity.model.User;
+import org.springframework.stereotype.Repository;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.Query;
 import java.util.List;
 
+@Repository
 public class RoleDaoimp implements RoleDao {
     @PersistenceContext
     private EntityManager entityManager;
